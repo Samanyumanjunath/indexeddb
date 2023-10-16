@@ -1,0 +1,11 @@
+<form (submit)="addChat()">
+    <input [(ngModel)]="message" name="message" required>
+    <button type="submit">Send</button>
+  </form>
+  
+  <button (click)="getChats()">Get Chat</button>
+  
+  <ul>
+    <li *ngFor="let chat of chats">{{ chat.message }}</li>
+  </ul>
+  
